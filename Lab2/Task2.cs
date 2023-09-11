@@ -8,37 +8,35 @@ namespace Lab2
 {
     public  class Task2
     {
-        //public int[ ] RotateArray( int[] array , int n)
-        //{
-        //    int[] sum = new int[array.Length];
-        //    array.CopyTo(sum, 0);
-        //    int[] rotated = new int[array.Length]  ;
-        //     int[] rotatedArray = new int[array.Length];
-        //    sum.CopyTo(rotatedArray, 0);
-        //    rotated = Rotate(rotatedArray);
-          
-        //    for (int i = 0; i < n; i++)
-        //    {
-        //        for (int j = 0; j < array.Length; j++)
-        //        {
-        //            sum[j] += rotated[j];
-        //        }
-                
-        //        rotated = Rotate( rotated);
-        //    }
-        //   return sum;
+        public int[] SumArray(int[] array, int position)
+        {
+            int[] sum = new int[array.Length];
+            for (int i = 0; i < position; i++)
+            {
+                Rotate(array);
+                for (int j = 0; j < sum.Length; j++)
+                {
+                    sum[j] += array[j];
+                }
+            }
+            return sum;
+        }
+        private void  Rotate(int[] array)
+        {
+            int length = array.Length;
+            int[] temp = new int[length];
+            int lastElement = array[length - 1];
 
-        //}
-        //private int[] Rotate(  int[] arrayForRotate )
-        //{ 
-        //    int[] rot = arrayForRotate;
-        //    int k = 1;
-        //    Array.Reverse(rot, 0, k);
-        //    Array.Reverse(rot, rot.Length - k, k);
-        //    Array.Reverse(rot);
-        //    return rot;
-            
-        //}
+            // Shift elements to the right
+            for (int i = length - 1; i > 0; i--)
+            {
+                array[i] = array[i - 1];
+            }
+
+            // Place the last element at the beginning
+            array[0] = lastElement;
+        }
+       
         
     }
 }
