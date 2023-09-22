@@ -26,7 +26,7 @@ namespace Lab3
             }
             return  familyList.OrderByDescending(p => p.Age).First();
         }
-        
+        //get people in alphabetic order
         List<Person> GPIAO()
         {
 

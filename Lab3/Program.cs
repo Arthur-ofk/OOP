@@ -142,7 +142,7 @@ switch (option)
         {
             string[] commandArgs = command.Split();
             string model = commandArgs[1];
-            double amountOfKm = double.Parse(commandArgs[2]);
+            double amountOfKm = double.Parse(commandArgs[2], CultureInfo.InvariantCulture);
 
             if (cars.ContainsKey(model))
                 cars[model].Drive(amountOfKm);
