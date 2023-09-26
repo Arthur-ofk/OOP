@@ -1,7 +1,7 @@
 ﻿
 using Lab4;
 using Lab4.Problem5;
-using Lab4.problem6;
+
 
 int option = int.Parse(Console.ReadLine());
 switch (option)
