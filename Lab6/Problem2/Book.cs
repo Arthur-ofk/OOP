@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab6.Problem2
 {
-    public  class Book
+    public class Book
     {
         string author;
         string title;
@@ -16,14 +16,16 @@ namespace Lab6.Problem2
             this.Author = author;
             this.title = title;
             this.price = price;
-        }   
+        }
         public string Author
         {
             get { return author; }
 
-            set {
-                 
-        }
+            set
+            {
 
+            }
+
+        }
     }
 }
